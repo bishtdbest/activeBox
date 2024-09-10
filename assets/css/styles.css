@@ -1,0 +1,169 @@
+/* reset */
+*{margin: 0;padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+img{ max-width: 100%; height: auto;}
+a{text-decoration: none; color: black;}
+button{background: none; border: 0 none; cursor: pointer; font: 400 15px/17px 'Roboto', sans-serif;}
+
+body{font: 500 17px/1.5 "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    color: black;
+    }
+
+.container{ max-width: 1170px; margin: 0 auto;}
+.header {padding: 26px 0; position: fixed; transition: padding 0.5s ease; left: 0; top: -1px; width: 100%; z-index: 9; border-bottom: solid 1px #505369;}
+.header.fixed-header{ background-color: #313550; box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.09);}
+.header .container{display: flex; align-items: center;}
+.header .logo img{display: block;}
+.mbMenu,.btnClose{display: none;}
+.menu{flex: 1; display: flex; justify-content: flex-end;}
+.menu ul{ display: flex; }
+.menu li{ font-size: 13px; margin-left: 56px;}
+.menu li a{ color: white; padding: 5px 10px; font-weight: 600; text-transform: uppercase; display: block; transition: all 0.5s ease;}
+.menu li a:hover{color: #ff6a6a;}
+
+.topBanner{background: url("../images/bannerBG.jpg") center center no-repeat; background-size: cover; background-attachment: fixed; min-height: 100vh; color: white; padding: 260px 0 154px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+margin-bottom: 62px;
+}
+.topBanner h1{font-size: 65px; font-weight: 300; text-transform: uppercase; margin: 0;}
+.topBanner h1 strong{font-weight: 600;}
+.topBanner strong.subheading { font-size: 51px; font-weight: 600; text-transform: uppercase; margin: 0;}
+.topBanner p{font-size: 22px; max-width: 64%; margin: 0 auto  70px;}
+
+.signUpFrom { width: 100%; }
+.signUpFrom form{ width: 60%; max-width: 615px; margin: 0 auto; display: flex; gap: 10px;}
+
+.defaultBtn{background-color: #e84545; color: white; font-size: 13px; text-transform: uppercase; width: 30%; border-radius: 3px;}
+
+input[type="text"]{flex: 1; padding: 10px;  outline: none; box-shadow: none; border: none; border-radius: 3px;}
+input[type="text"]:focus { outline: none; box-shadow: none; border: none;}
+
+.testimonialWrapper{ display: flex; background-color: #53354a; margin-bottom: 62px;}
+.testimonialImg{width: 50%; display: flex;}
+.testimonialImg img{object-fit: cover; object-position: top right;}
+.testimonialContainer{width: 50%; padding: 100px 0 100px 80px;}
+.testimonialContainer q{ margin-bottom: 20px; display: block;}
+.testimonialContainer strong{display: block; font-size: 13px; text-transform: uppercase;}
+.owl-carousel{max-width: 586px; color: white;}
+.owl-carousel q{font-size: 36px;}
+
+.owl-theme .owl-dots .owl-dot span{background-color: rgba(255, 255, 255, 0.5) !important;}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{background: white !important;}
+
+.imageGallery{display: flex; flex-wrap: wrap;}
+.imageGallery .galleryItem{width: 25%; position: relative; display: flex; overflow: hidden;border-right: solid 1px white; border-top: solid 1px white;}
+.imageGallery .galleryItem:hover .imgDetail {bottom: 0;}
+.galleryItem .imgDetail {position: absolute; left: 0; bottom: -100%; height: 100%; width: 100%; transition: all 0.2s linear 0s;
+    /* background-color: #e84545; */
+    background-color: rgba(232, 69, 69, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.galleryItem strong{ font-size:  14px;}
+
+.footerContainer{ background-color: #3a3e64; }
+.footerContainer .container{display: flex; padding: 65px 0 80px; color: rgba(255, 255, 255, 0.5);}
+.footerContainer .container>div{width: 33%; text-align: center;}
+.footerContainer strong{text-transform: uppercase; display: block; margin-bottom: 10px;  color: white;}
+.socialMediaIcons{display: flex; align-items: center; justify-content: center; gap: 7px;} 
+.socialMediaIcons a{display: flex;background-color: transparent; width: 40px; height: 40px; transition: all 0.2s linear 0s; border: solid 2px white; border-radius: 3px; align-items: center; justify-content: center;}
+.socialMediaIcons a:hover{background-color: #e84545; border-color: #e84545; }
+.footerBottom{ background-color: #313454; }
+.footerBottom .container{ color: #808080; font-size: 14px; text-align: center; padding: 25px 0;}
+.footerBottom strong{font-weight: normal; color: white;}
+
+
+@media (max-width: 991.98px) { 
+    .container{ max-width: calc(100% - 40px); }
+    .mbMenu,.btnClose{display: block;}
+    .logo{flex: 1;}
+    .header .logo img{max-width: 150px;}
+    .mbMenu{ border-radius: 50%; background-color: #e84545; height: 44px; width: 44px; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+    .mbMenu span{display: block; height: 3px; background-color: white; width: 16px;}
+    .mbMenu span:nth-child(2){margin: 4px 0;}
+    .menu{ position: fixed; width: 100%; height: 100%; top: 0; left: -100%; transition: left 0.2s ease; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; }
+    .menu.active{left: 0;}
+    .menu ul{display: block; padding: 60px 0; margin-right: 0; width: 100%;}
+    .menu ul li {font-size: 33px; text-align: center; margin: 0;}
+    .btnClose { position: absolute;  right: 20px; top: 7px;
+        border-radius: 50%; background-color: #e84545; height: 44px; width: 44px; display: flex; align-items: center; justify-content: center; flex-direction: column;
+      }
+      .btnClose:hover {
+        opacity: 1;
+      }
+      .btnClose:before, .btnClose:after {
+        position: absolute;
+        left: 20px;
+        content: ' ';
+        height: 18px;
+        width: 3px;
+        background-color: white;
+      }
+      .btnClose:before {
+        transform: rotate(45deg);
+      }
+      .btnClose:after {
+        transform: rotate(-45deg);
+      }
+    
+    .header {padding: 8px 0;}
+
+    .topBanner{padding: 150px 30px;}
+
+    .testimonialContainer{padding: 50px;}
+    .owl-carousel q {
+        font-size: 24px;
+    }
+
+
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 1199.98px){}
+@media (max-width: 767.98px){
+.topBanner{
+    padding: 120px 0 154px;
+}
+.topBanner h1 {
+    font-size: 45px;}
+    .topBanner strong.subheading {
+        font-size: 31px;}
+        .topBanner p {
+            font-size: 18px;
+            max-width: 80%;
+        } 
+        .signUpFrom form {
+            width: 80%;}
+
+            .testimonialWrapper {
+                flex-direction: column;}
+                .testimonialImg {
+                    width: 100%;}
+                    .testimonialContainer {
+                        width: 100%;
+                        padding: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .testimonialContainer  .owl-item{text-align: center;}
+                    .owl-carousel q {font-size: 18px;}
+                    .imageGallery .galleryItem{width: 50%;}
+                    .imageGallery .galleryItem img{width: 100%;}
+                    .footerContainer .container { padding: 40px 0;
+                        flex-direction: column; gap: 30px;}
+                        .footerContainer .container>div {
+                            width: 100%;
+                            max-width: 386px;
+                            margin: 0 auto;
+                        }
+}
+@media (max-width: 575.98px){
+    .imageGallery .galleryItem{width: 100%; border-right: 0 none;}
+}
